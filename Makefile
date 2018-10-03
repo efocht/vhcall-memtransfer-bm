@@ -15,9 +15,9 @@ vh2ve : vh2ve.o
 vh2ve.o : vh2ve.c
 	$(CC) -o vh2ve.o -O2 -fopenmp -c $<
 
+.PHONY: clean vh
 vh:
 	make -C vh
 
-.PHONY: clean
 clean :
 	rm -f *.o ve2vh vh2ve
